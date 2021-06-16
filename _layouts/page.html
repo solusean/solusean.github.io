@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="page-content-header">
+  <div class="page-content-header-title">{{ page.title }}</div>
+  <div class="page-content-header-date">
+    {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+    {{ page.date | date: date_format }}
+  </div>
+</div>
+<div class="top-banner">
+
+</div>
+<br>
+<article>
+  <div class="page-wrapper">
+    {% if page.title != 'About' %}
+
+    {% endif %}
+
+    {{ content }}
+
+    <br>
+    <hr/>
+    {% for cat in page.categories %}
+    {% for post in site.categories[cat] %}
+    {% if post.url == page.url %}
+    {% assign current_index = forloop.index %}
+    {% endif %}
+    {% endfor %}
+
+    {% if site.categories[cat].size > 1 %}
+    <h2>관련 글 더보기</h2>
+    {% endif %}
+
+    {% assign start_index = current_index | minus: 3 %}
+    {% if start_index < 1 %}
+    {% assign start_index = 1 %}
+    {% endif %}
+
+    {% assign end_index = start_index | plus: 5 %}
+
+    {% for post in site.categories[cat] %}
+    {% if forloop.index >= start_index %}
+    {% if forloop.index <= end_index %}
+    {% if post.url != page.url %}
+    <p>- <a href="{{ post.url }}" class="recommendations">{{ post.title }}</a></p>
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    
+
+  </div>
+
+  {% if page.permalink != '/about.html' %}
+  <div class='last-comment'>
+
+    <p> Beetles! Let's go! </p>
+  </div>
+
+
+
+  {% endif %}
+
+</article>
+
