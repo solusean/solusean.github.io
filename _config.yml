@@ -1,5 +1,5 @@
 title: Eddy's Note
-description: Writing than memorizing
+description: Beetle in grass
 
 url:   https://eddyyoo.github.io
 image: # /images/logo.png
@@ -17,7 +17,7 @@ permalink: /:categories/:title
 
 # social
 author: Eddy Yoo
-disqus_shortname:   Eddy
+disqus_shortname: Eddy
 google_analytics:   
 
 repository: eddyyoo/eddyyoo.github.io
