@@ -16,7 +16,7 @@ theme:
 permalink: /:categories/:title
 
 # social
-author: Eddy Yoo
+author: EddyYoo
 disqus_shortname: Eddy
 google_analytics:   
 
