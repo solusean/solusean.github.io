@@ -10,7 +10,7 @@ permalink: /about.html
 + [GitHub](https://github.com/eddyyoo)
 + [LinkedIn]
 + [YouTube]
-+ <eddy.yoo.dev@gmail.com>
+
 
 ## History
 + 
