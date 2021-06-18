@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "[Java] 변수와 상수 "
+title:  "[Java] 변수 "
 description: " [Java] Ch-01 "
 headline: 
 tags: [Java]
@@ -10,7 +10,7 @@ categories: Java
 ---
 posted [2021-06-14] 
 
-# 변수와 상수 
+# 변수 (
 
 ## 1.1 변수 (variable)
 변수란, '값을 저장할 수 있는 메모리상의 공간'을 의미한다. 흔히 여태까지 배운 수학에서의 변수는 '변하는 수' 라고 정의하지만, 프로그래밍에서는 다른 의미로 사용이 된다. 
