@@ -51,3 +51,16 @@ posted [2021-06-14]
 
 ## 4. abstract - 추상의, 미완성의 
 
+
+
+
+접근 제한자 (access modifier)
+
+접근자를 사용하는 대상? 클래스, 인터페이스, 맴버필드, 멤버 메서드 등
+public, protected, private, default
+
+클래스명 앞에는 접근자가 먼저 와야함
+e.g. public class 클래스명()
+그러나 이를 생략하면
+class 클래스명 () : 접근자를 생략하면 default이다.
+default라는 것은 따로 적어주지 않는다. 
