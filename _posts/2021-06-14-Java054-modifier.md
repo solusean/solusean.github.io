@@ -54,7 +54,7 @@ posted [2021-06-14]
 
 
 
-접근 제한자 (access modifier)
+접근 제한자 (access modifier) 5월 24일 1130 수업
 
 접근자를 사용하는 대상? 클래스, 인터페이스, 맴버필드, 멤버 메서드 등
 public, protected, private, default
@@ -64,3 +64,74 @@ e.g. public class 클래스명()
 그러나 이를 생략하면
 class 클래스명 () : 접근자를 생략하면 default이다.
 default라는 것은 따로 적어주지 않는다. 
+
+
+protected : 같은 패키지 또는 자식 클래스에서 사용할 수 있다. 
+private : 외부에서 사용될 수 없다. // 즉 파일, 원래 선언된 파일 안에서만 쓸 수 있다. 
+public : 외부 클래스가 자유롭게 상요 가능하다
+default : 같은 패키지에 소속된 클래스에서 사용 가능 하다
+```Java
+public class A {
+    public A(boolean b) {}
+    A(int b){} // 이 클래스A안에서만 사용할 수 있음. Class B에 가서 사용 못함
+    private A(String s){}
+    
+    A a1 = new A (true);
+    A a2 = new A (1);
+    A a3 = new A ("문자열");
+}
+
+public class B {
+    A a1 = new A (true);
+    A a2 = new A (1);
+    //접근자가 private이므로, 다른 클래스에서는 접근이 불가능
+    // A a3 = new A("문자열") 
+}
+```
+
+클래스는 객체를 생성하기 위한 목적으로, 객체를 분석해서 만든 설계도이다. 
+
+Class A{}
+A obj = new A(); //객체 생성 구문
+A() : 생성자 메서드에 접근 제한 
+
+```Java 
+public class A {
+    //필드
+    public int field1;
+    int field2; // dafault
+    private int field3;
+    
+    //생성자
+    public A() {
+        field1 = 1;
+        field 2 = 1;
+        field 3 = 1;
+        
+        method1();
+        method2();
+        method3();
+    }
+    
+    //메서드
+    public void method1() {}
+    void method2() {} // default
+    private void method3() {}
+}
+
+// 이렇게 있고
+
+public class B {
+    public B() {
+        A a = new A(); // new 연산자가 A클래스에 멤버를 내용으로 하여, 힙메모리에 메모리를 생성 한다. 
+        
+        a.field1 = 1;
+        a.field2 = 1;
+        a.field3 = 1; // 이것은 인식이 안됨. 접근자가 private 이기 때문. 
+        
+        a.method1();
+        a.method2()
+        
+        a.method3(); // 접근이 불가능 하다, private 이므로
+    }
+}
