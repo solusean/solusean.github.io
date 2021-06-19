@@ -81,3 +81,46 @@ public class Earth {
 이전의 math라는 것에서 얘를 들어보자면
 원주율 (pi)를 떠올려 보자. 
 Math.PI 라는 이런 수학적인 것들은 불변의 값들이 결정이 나있기 때문에 컴퓨터에서 결정이 되어 있다. 그러나, 컴퓨터에서 사전에 정의되지 않은, "프로그래머가 원하는 절대적인 임의의 상수"를 하나 만들어주고 싶다면, 위의 static final을 사용하는 것이다. 
+
+
+고객 대출 상품 판매 
+성명/ 주민번호 / 주소 / 대출금액 / 이율
+Static 사용하는 목적 - 객체가 해당정보를 공유하는 목적 
+
+고객대출 상품 클래스
+```java
+public class LoanCustomer {
+  String name;
+  String ssn;
+  String addr;
+  int price; 
+  double iYul; // 필드 선언
+  // -> static double iYul = 0.25; 
+  // static은 여러 인스턴스객체가 공유의 목적으로 사용하는 용도이다 
+  
+  
+  public LoanCustomer(String name, String ssn, String addr, int price, double iYul) {
+      this.name = name;  // this를 사용하는 이유는, 필드와 매개변수를 구분하기 위해서이다. 
+      this.ssn = ssn;
+      this.addr = addr;
+      this.price = price;
+      this.iYul = iYul;
+  }
+}
+```
+
+
+
+public class LoanBizActin
+    public static void main(String[] args){
+    LoanCustomer loanUser01 = new LoanCustomer ("홍길동", "3838-2992", "역삼동", 5000, 0.3);
+    LoanCustomer loanUser02 = new LoanCustomer ("둘리", "3838-2992", "역삼동", 5000, 0.3);
+    LoanCustomer loanUser03 = new LoanCustomer ("도우너", "3838-2992", "역삼동", 5000, 0.3);
+    
+    // 대출 A라는 상품의 이율이 0.3 -> 0.25로 변경이 된다면? 위에서는 일일히 바꾸어 줘야 함
+    // 고정금리 같은 공용의 상품은, instace 보다는 static으로 해주는 것이 낫다. 즉 LoanCustomer 클래스의 double iYul 을 정적 멤버로 바꾸어 주는 것이다. 
+    // double iYul; -> Static double iYul = 0.25; 로 바꾸면, 매번 고객에서 찾아가는 것이 아니라, 이율 부분만 바꾸어 주면 되는 것이다. 
+    
+    SYstem.out.println("홍길동님의 대출금액?" + loanuser01.price + "원 입니다." + "이율은 ?" + loanCustomer.iYul);
+    
+    }
