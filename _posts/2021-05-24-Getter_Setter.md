@@ -27,6 +27,7 @@ public void setSpeed(int speed) {} 를 생성을 하면,
 
 
 Getter, setter 메서드를 중간에 삽입해서, private 변수를 대신 하는 것이다. 
+0524 1230 수업
 
 ```Java
 public class Car {
@@ -108,3 +109,7 @@ public class CarEx {
 변호사를 이용하면 일이 쉽다. 그러나 피고인이나 당사자를 만나서 처리하면 피곤해진다.
 그러므로 사건 당사자를 private으로 만들어 버리고, 변호인을 public으로 만드는 것이다. 
 위의 이 예시를 조금 더 깔끔하게 바꾸어 보기. 
+
+boolean 타입은 setspeed, is stop 으로 get부분이 isstop이런 식으로 만들어 진다. 
+
+이러한 것을 캡슐화 라고 한다. 캡슐화는 한번 더 검색해서 알아보기. 
