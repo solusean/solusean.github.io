@@ -11,7 +11,7 @@ categories: Java
 posted [2021-06-14] 
 
 # Getter and Setter
-게터와 세터 메소드 0424 1230 수업. 페이지 301
+게터와 세터 메소드 0524 1230 수업. 페이지 301
 
 일반적으로 객체지향 프로그래밍에서는 객체의 필드를 객체 외부에서 직접적으로 접근하는 것을 막는다. 
 그 이유는 외부에서 마음대로 변경할 경우 객체의 무결성(결점이 없는 성질)이 깨질 수 있기 때문이다. 
@@ -42,11 +42,7 @@ public class Car {
       public void setSpeed(int speed) {
       
       }
-
-
-
 }
-
 
 public class CarEx {
 
