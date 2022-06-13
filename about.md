@@ -6,8 +6,8 @@ permalink: /about.html
 ---
 
 ## Contact
-+ [Blog](https://eddyyoo.github.io)
-+ [GitHub](https://github.com/eddyyoo)
++ [Blog](https://solusean.github.io)
++ [GitHub](https://github.com/solusean)
 + [LinkedIn]
 + [YouTube]
 
