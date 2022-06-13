@@ -1,7 +1,7 @@
-title: Eddy's Note
+title: Sean's Note
 description: Let's go beetles
 
-url:   https://eddyyoo.github.io
+url:   https://solusean.github.io
 image: /images/logo.png
 
 show_downloads: false
@@ -16,11 +16,11 @@ theme:
 permalink: /:categories/:title
 
 # social
-author: Eddy Yoo
-disqus_shortname:   Eddy Yoo
+author: Sean Yoo
+disqus_shortname:   Sean Yoo
 google_analytics:   
 
-repository: eddyyoo/eddyyoo.github.io
+repository: solusean/solusean.github.io
 
 highlighter: rouge
 markdown:    kramdown
